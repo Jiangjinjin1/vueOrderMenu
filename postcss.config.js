@@ -1,5 +1,4 @@
 module.exports = {
-  syntax: 'postcss-scss',
   plugins: {
     'postcss-salad': {
       browsers: [
@@ -18,6 +17,9 @@ module.exports = {
     cssnano: {
       reduceIdents: false,
       zindex: false
+    },
+    'postcss-import': {
+      addDependencyTo: require('webpack')
     }
   }
 }
